@@ -1,4 +1,4 @@
-module UserService::API
+module UserService::Api
   module AuthTokens
 
     module_function
@@ -18,7 +18,7 @@ module UserService::API
           # Token is valid for login
           t.usages_left = t.usages_left - 1
           t.save
-          return UserService::API::Users::from_model(t.person)
+          return UserService::Api::Users::from_model(t.person)
         end
       end
     end
